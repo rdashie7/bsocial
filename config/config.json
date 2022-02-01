@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "TempPass01",
+    "database": "my_social",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "TempPass01",
+    "database": "my_social",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "b7acd002a8bc83",
+    "password": "8d71695b",
+    "database": "heroku_7cf1e949430968b",
+    "host": "eu-cdbr-west-02.cleardb.net",
+    "dialect": "mysql"
+  }
+}

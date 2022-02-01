@@ -1,0 +1,406 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.wrapper {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+
+.blue-dropdown .dropdown-toggle {
+    color: #61dafb;
+}
+
+.blue-dropdown .dropdown-toggle:hover, .blue-dropdown.show .dropdown-toggle:focus {
+    color: #1375b9;
+}
+
+.blue-dropdown .dropdown-toggle:active, .blue-dropdown .dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+
+body {
+    background-color: #d3d1d1
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input, .birthday-input {
+    border: 1px solid #2c3034;
+    border-radius: 4px;
+}
+
+
+
+
+/*==================================== Buttons ====================================*/
+.blue-btn {
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #337ae8;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    text-align: center;
+    min-width: 120px;
+}
+
+.blue-btn:hover {
+    background-color: #2254a2;
+}
+/*==================================== Buttons ====================================*/
+
+
+
+
+
+
+/*==================================== Navbar ====================================*/
+nav ul a.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-image {
+    display: inline-block;
+}
+
+/*==================================== Navbar ====================================*/
+
+
+/*==================================== Forms ====================================*/
+.custom-form {
+    border: 1px solid #2c3034;
+    padding: 15px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.custom-form .field-group {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.custom-form label {
+    display: block;
+    font-weight: 700;
+}
+
+.custom-form input {
+    width: 100%;
+}
+
+.custom-form button {
+    margin-top: 5px;
+}
+
+.success-message {
+    padding: 9px;
+    background-color: #08ff82;
+    color: #006e10;
+    margin: 15px auto 0;
+    border-radius: 10px;
+    border: 2px solid #006e10;
+}
+
+.error-message {
+    padding: 9px;
+    background-color: #f87c7c;
+    color: #d32222;
+    margin: 15px auto 0;
+    border-radius: 10px;
+    border: 2px solid #d32222;
+}
+
+.validation-message {
+    color: red;
+    margin: 0;
+}
+
+/*==================================== Forms ====================================*/
+
+
+
+/*==================================== Profile Page ====================================*/
+.profile-page__content {
+    display: flex;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.profile__photo {
+    border: 1px dotted black;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.photo__gallery__wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    cursor: pointer;
+    transform: translate(-100%, 100%);
+    transition-duration: 0.3s;
+}
+
+.profile__photo:hover .photo__gallery__wrap {
+    transform: translate(0, 0);
+}
+
+/*.photo__gallery {*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*}*/
+/*==================================== Profile Page ====================================*/
+
+
+
+
+
+
+
+
+
+/*==================================== Settings Page ====================================*/
+
+.settings-page .field-group {
+    margin-bottom: 7px;
+}
+
+#general-data-form {
+    margin: 0;
+}
+
+.birthday-input {
+    padding: 0;
+    height: 26px;
+}
+
+select[name="rcrs-country"], select[name="rcrs-region"] {
+    width: 180px;
+}
+
+.edit-profile-message {
+    width: auto;
+}
+/*==================================== Settings Page ====================================*/
+
+
+
+
+
+
+
+
+/*==================================== Photo Modal ====================================*/
+#photo-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1000;
+    cursor: pointer;
+}
+
+.photo-modal {
+    max-width: 700px;
+}
+
+.cutter {
+    margin: 15px 0;
+}
+
+.cutter-wrap {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.cutter-holder {
+    margin: 0 auto;
+    position: relative;
+}
+
+.cutter-faded {
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .7;
+}
+
+.cutter-window {
+    cursor: move;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cutter-window.expanding {
+    cursor: default;
+}
+
+.cutter-window__wrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.cutter-window__expander {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #919494;
+    opacity: 0.5;
+
+}
+
+.expander-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: ns-resize;
+}
+
+.expander-top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    cursor: nesw-resize;
+}
+
+.expander-right {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    cursor: ew-resize;
+}
+
+.expander-right-bottom {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    cursor: nwse-resize;
+}
+
+.expander-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    cursor: ns-resize;
+}
+
+.expander-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    cursor: nesw-resize;
+}
+
+.expander-left {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: ew-resize;
+}
+
+.expander-left-top {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    cursor: nwse-resize;
+}
+
+
+#photo-holder {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+#photo-window {
+    position: absolute;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.noSelect:focus {
+    outline: none !important;
+}
+/*==================================== Photo Modal ====================================*/
+
+
+
+
+
+
+
+
+
+
+/*==================================== Login Page/Register Page ====================================*/
+.login-page .error-message, .login-page .success-message,
+.register-page .error-message, .register-page .success-message {
+    width: 400px;
+}
+/*==================================== Login Page/Register Page ====================================*/
