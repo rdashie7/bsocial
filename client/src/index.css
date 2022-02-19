@@ -55,6 +55,10 @@ button {
     border: none;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 input, .birthday-input {
     border: 1px solid #2c3034;
     border-radius: 4px;
@@ -229,6 +233,58 @@ select[name="rcrs-country"], select[name="rcrs-region"] {
 .edit-profile-message {
     width: auto;
 }
+
+.connections {
+    width: 300px;
+    list-style: none;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid #2c3034;
+    margin: 10px 0 0;
+}
+
+.connections__item {
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+
+.connections__item.non-confirmed {
+    background-color: #e3c653;
+}
+
+.connections__item.allowed {
+    background-color: #87de8e;
+}
+
+.connections__item.blocked {
+    background-color: #ee7474;
+}
+
+.status-buttons {
+    margin-top: 10px;
+}
+
+.allow-ip-btn, .ban-ip-btn {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.allow-ip-btn {
+    margin-right: 10px;
+    background-color: #2ede8a;
+}
+
+.ban-ip-btn {
+    background-color: #fa4242;
+}
+
+/*.connections li:hover {*/
+/*    background-color: #8d9096;*/
+/*    transition-duration: 0.2s;*/
+/*}*/
 /*==================================== Settings Page ====================================*/
 
 

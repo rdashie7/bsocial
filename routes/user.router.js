@@ -43,7 +43,6 @@ UserApiRouter.get('/', async function (req, res, next) {
         });
 
         res
-            .status(200)
             .json({
                 firstname: userData.firstName,
                 lastname: userData.lastName,
@@ -102,7 +101,6 @@ UserApiRouter.post('/avatar', authMiddleware, async function (req, res, next) {
         }
 
         res
-            .status(200)
             .json({
                 message: 'Avatar uploaded',
                 details: {
@@ -223,6 +221,81 @@ UserApiRouter.get('/data',
                     city: userData.city,
                 }
             })
+        } catch (e) {
+            next(e);
+        }
+    }
+);
+
+UserApiRouter.get('/connections',
+    authMiddleware,
+    async function (req, res, next) {
+        try {
+            let connections = await db.Connection.findAll({
+                attributes: [
+                    'ip', 'ip_status', 'os', 'browser', 'country', 'city', 'last_connect'
+                ],
+                where: {
+                    user_id: req.userData.userId
+                }
+            });
+
+            console.log(connections)
+
+            res.json({
+                message: 'Подключения успешно отправлены!',
+                details: {
+                    connections
+                }
+            });
+        } catch (e) {
+            next(e);
+        }
+    }
+);
+
+UserApiRouter.post('/connections/allow',
+    authMiddleware,
+    async function (req, res, next) {
+        try {
+            const {ip} = req.body;
+
+            await db.Connection.update({
+                ip_status: 1
+            }, {
+                where: {
+                    user_id: req.userData.userId,
+                    ip
+                }
+            });
+
+            res.json({
+                message: 'IP адрес разрешен!'
+            });
+        } catch (e) {
+            next(e);
+        }
+    }
+);
+
+UserApiRouter.post('/connections/block',
+    authMiddleware,
+    async function (req, res, next) {
+        try {
+            const {ip} = req.body;
+
+            await db.Connection.update({
+                ip_status: 2
+            }, {
+                where: {
+                    user_id: req.userData.userId,
+                    ip
+                }
+            });
+
+            res.json({
+                message: 'IP адрес заблокирован!'
+            });
         } catch (e) {
             next(e);
         }

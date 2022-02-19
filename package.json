@@ -26,12 +26,11 @@
     "winston": "^3.3.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "build": "cd client && npm i && npm run build",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
-    "img": "cd ../bsocial_images_api && npm run nodemon"
+    "img": "cd ../bsocial_images_api && npm run nodemon",
+    "app": "npm run server && npm run client && npm run img"
   },
   "author": "",
   "license": "ISC"
